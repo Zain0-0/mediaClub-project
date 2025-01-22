@@ -114,6 +114,9 @@ a {
     .menu-icon{
         display:inline !important;
     }
+    .size20{
+        font-size:16px;
+    }
 }
 
 /* hero start */
