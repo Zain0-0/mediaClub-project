@@ -18,6 +18,24 @@ $('.clients-logo').owlCarousel({
     }
 })
 
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+
 
 let containerTop = $('.container-top');
 let heroImg = $('.hero-img');
@@ -39,11 +57,7 @@ let bannerItems = [
     },
 ];
  
-// for (i ; i < bannerItems.length;i++){
-//     setTimeout(() => {
-       
-//     },1000)
-// }
+
 
 let index = 0
 const changeBannerItem = ()=>{
@@ -59,26 +73,7 @@ const changeBannerItem = ()=>{
 
 setInterval(changeBannerItem,5000)
 
-// $('.freelancers-section-carousel').owlCarousel({
-//     loop:true,
-//     margin:20,
-//     responsiveClass:true,
-//     dots: false,
-//     autoplay:true,
-//     responsive:{
-//         600:{
-//             items:1,
-//             nav:false,
-//             loop:true
-//         },
-//         1000:{
-//             items:3,
-//             nav:false,
-//             loop:false,
-            
-//         }
-//     }
-// })
+
 $('.freelancers-section-carousel').owlCarousel({
     loop:true,
     margin:20,
